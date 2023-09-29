@@ -19,3 +19,8 @@ Example Docker Hub
 docker login -u <<username>> -p <<password>> docker.io
 docker pull docker.io/truemark/tomcat:8.0.21-temurin-jdk8
 ```
+
+Build Locally
+```bash
+docker build . -t tomcat:8 -f 8.0.21/jdk-8/Dockerfile 
+```
