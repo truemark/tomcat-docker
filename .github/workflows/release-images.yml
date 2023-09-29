@@ -43,12 +43,12 @@ jobs:
             --push \
             --platform linux/arm64,linux/amd64 \
             -f 8.0.21/jdk-8/Dockerfile \
-            -t truemark/tomcat:8.0.21-temurin:jdk8 \
+            -t truemark/tomcat:8.0.21-temurin-jdk8 \
             .
       - name: Copy 8.0.21-temurin:jdk8 to ECR
         uses: truemark/skopeo-copy-action@v1
         with:
-          src-image: "docker://truemark/tomcat:8.0.21-temurin:jdk8"
+          src-image: "docker://truemark/tomcat:8.0.21-temurin-jdk8"
           dest-image: "docker://public.ecr.aws/truemark/tomcat:8.0.21-temurin:jdk8"
           src-username: "${{ secrets.DOCKER_HUB_USERNAME }}"
           src-password: "${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}"
