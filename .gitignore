@@ -1,0 +1,5 @@
+docker/docker
+.*.swp
+*.orig
+.idea
+.DS_Store
